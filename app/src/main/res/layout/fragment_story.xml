@@ -47,6 +47,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="24dp"
                 android:breakStrategy="simple"
+                android:lineSpacingExtra="3dp"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
