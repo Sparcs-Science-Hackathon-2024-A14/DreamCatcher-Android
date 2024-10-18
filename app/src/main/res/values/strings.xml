@@ -21,4 +21,8 @@
     <string name="science_story_example1">부력의 원리 (아르키메데스의 원리): 아르키메데스의 원리에 따르면, 유체 속에 잠긴 물체는 그 물체가 밀어낸 유체의 무게만큼 위로 뜨는 힘을 받습니다. 열기구의 경우, \'유체\'는 공기입니다.</string>
     <string name="science_story_example2">기체의 열팽창 (샤를의 법칙): 압력이 일정할 때 기체의 부피는 절대온도에 비례합니다. 즉, 공기를 가열하면 부피가 증가하고 밀도가 감소합니다.</string>
     <string name="science_place_example">대전의 갑천은 대전의 하천입니다. 대전의 3대 하천 중에 하나로, 가장 긴 하천입니다. 매넌 다양하고 아름다운 꽃이 피는 곳입니다.</string>
+    <string name="story_dialog_title_example">스토리 이름</string>
+    <string name="story_dialog_content_example">스토리 내용 스토리 내용 스토리 내용 스토리 내용 스토리 내용 스토리 내용</string>
+    <string name="dialog_hint_title">Hint</string>
+    <string name="btn_confrim">확인하기</string>
 </resources>
