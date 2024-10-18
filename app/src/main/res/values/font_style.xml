@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- h1_40_medium -->
+    <style name="h1_40_medium">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">40sp</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <!-- h2_20_bold -->
+    <style name="h2_20_bold">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+
+    <!-- h3_18_semiBold -->
+    <style name="h3_18_semibold">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+
+    <!-- h4_18_medium -->
+    <style name="h4_18_medium">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <!-- body1_14_bold -->
+    <style name="body1_14_bold">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">700</item>
+    </style>
+
+    <!-- h1_40_medium -->
+    <style name="body2_14_medium">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">40sp</item>
+        <item name="fontWeight">500</item>
+    </style>
+
+    <!-- h5_60_Book -->
+    <style name="h5_60_Book">
+        <item name="android:fontFamily">@font/nova_slim_regular</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">60sp</item>
+    </style>
+
+    <!-- h4_40_Book -->
+    <style name="h4_40_Book">
+        <item name="android:fontFamily">@font/nova_slim_regular</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+
+</resources>
