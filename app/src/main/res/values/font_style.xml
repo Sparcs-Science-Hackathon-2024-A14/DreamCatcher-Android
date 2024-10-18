@@ -35,6 +35,14 @@
         <item name="fontWeight">500</item>
     </style>
 
+    <!-- h5_18_regular -->
+    <style name="h5_18_regular">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">400</item>
+    </style>
+
     <!-- body1_14_bold -->
     <style name="body1_14_bold">
         <item name="android:fontFamily">@font/pretendard_variable</item>
@@ -49,6 +57,14 @@
         <item name="android:textColor">@color/Black</item>
         <item name="android:textSize">14sp</item>
         <item name="fontWeight">500</item>
+    </style>
+
+    <!-- body3_14_regular -->
+    <style name="body3_14_regular">
+        <item name="android:fontFamily">@font/pretendard_variable</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">400</item>
     </style>
 
     <!-- h5_60_Book -->
