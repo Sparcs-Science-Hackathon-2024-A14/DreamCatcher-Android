@@ -3,11 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/signInFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.dreamcatcher_android.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.dreamcatcher_android.ui.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" />
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.dreamcatcher_android.ui.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in"/>
+
+    <fragment
+        android:id="@+id/badgeFragment"
+        android:name="com.example.dreamcatcher_android.ui.BadgeFragment"
+        android:label="BadgeFragment"
+        tools:layout="@layout/fragment_badge"/>
 </navigation>
