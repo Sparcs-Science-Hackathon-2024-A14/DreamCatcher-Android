@@ -25,4 +25,10 @@
     <string name="story_dialog_content_example">스토리 내용 스토리 내용 스토리 내용 스토리 내용 스토리 내용 스토리 내용</string>
     <string name="dialog_hint_title">Hint</string>
     <string name="btn_confrim">확인하기</string>
+    <string name="story_clear_text">미션을 성공했습니다.\n꿈의 주인이 깨어났으니 보상으로 뱃지를 드리겠습니다.</string>
+    <string name="dream_out">꿈에서 나기기</string>
+    <string name="story_start_text_example">열기구를 띄우는 원리는 간단하다네. 뜨거운 공기가 차가운 공기보다 가벼워지니까, 열기구가 위로 떠오르는 걸세!</string>
+    <string name="option1_example">버너에 불을 붙여 가열한다</string>
+    <string name="option2_example">버너를 터뜨린다</string>
+    <string name="stroy_question_example">열기구를 띄우려고한다.\n당신의 선택은?</string>
 </resources>
