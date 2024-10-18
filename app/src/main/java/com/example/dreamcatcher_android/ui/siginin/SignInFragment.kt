@@ -1,19 +1,26 @@
 package com.example.dreamcatcher_android.ui.siginin
 
-import android.util.Log
+import androidx.navigation.fragment.findNavController
 import com.example.dreamcatcher_android.R
 import com.example.dreamcatcher_android.base.BaseFragment
 import com.example.dreamcatcher_android.databinding.FragmentSignInBinding
+import com.example.dreamcatcher_android.util.navigateSafe
 
 class SignInFragment : BaseFragment<FragmentSignInBinding>(R.layout.fragment_sign_in) {
 
     override fun setLayout() {
-        start()
+        initSettings()
     }
 
-    fun start() {
-        Log.d("로그","ㅇ")
+    private fun initSettings() {
+        initButtons()
     }
 
+    private fun initButtons() {
+        binding.fragmentSigninLoginIb.setOnClickListener {
+            val action = SignInFragmentDirections.actionSignInFragmentToHomeFragment()
+            findNavController().navigateSafe(action.actionId)
+        }
+    }
 
 }

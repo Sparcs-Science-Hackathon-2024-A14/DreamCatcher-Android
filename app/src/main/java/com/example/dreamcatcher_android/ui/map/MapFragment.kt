@@ -6,10 +6,12 @@ import android.os.Looper
 import android.util.Log
 import androidx.annotation.UiThread
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.example.dreamcatcher_android.R
 import com.example.dreamcatcher_android.base.BaseFragment
 import com.example.dreamcatcher_android.databinding.FragmentMapBinding
 import com.example.dreamcatcher_android.util.PermissionCheckList
+import com.example.dreamcatcher_android.util.navigateSafe
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.naver.maps.geometry.LatLng
@@ -60,11 +62,19 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
     }
 
     private fun initSettings() {
+        initButtons()
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
 
         if (arePermissionsGranted()) { initMap() }
         else { Log.d("HomeFragment", "Location permission is not granted.") }
+    }
+
+    private fun initButtons() {
+        binding.fragmentHomeStoryBtn.setOnClickListener {
+            val action = MapFragmentDirections.actionMapFragmentToBadgeFragment()
+            findNavController().navigateSafe(action.actionId)
+        }
     }
 
     // 네이버 맵 동적으로 불러오기
