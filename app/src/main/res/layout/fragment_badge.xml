@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Sky_Blue"
+        tools:context=".ui.BadgeFragment">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/fragment_badge_top_background_ct"
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:background="@drawable/ic_badge_top_background"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintHeight_percent="0.45">
+
+             <ImageView
+                 android:id="@+id/fragment_badge_title_logo_iv"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_badge_logo"
+                 android:layout_marginTop="8dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <TextView
+                 style="@style/h4_40_Book"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Dream Cathcer"
+                 android:textColor="@color/White"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/fragment_badge_title_logo_iv" />
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_badge1_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:background="#F1EAFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_top_background_ct"
+            app:shapeAppearance="@style/Circle" />
+
+        <TextView
+            android:id="@+id/fragment_badge_badge1_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="스토리 이름"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_badge_badge1_iv"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_badge1_iv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge1_iv" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_badge2_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
+            android:background="#F1EAFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_top_background_ct"
+            app:shapeAppearance="@style/Circle" />
+
+        <TextView
+            android:id="@+id/fragment_badge_badge2_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="스토리 이름"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_badge_badge2_iv"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_badge2_iv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge2_iv" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_badge3_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:background="#F1EAFF"
+            android:layout_marginTop="120dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_top_background_ct"
+            app:shapeAppearance="@style/Circle" />
+
+        <TextView
+            android:id="@+id/fragment_badge_badge3_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="스토리 이름"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_badge_badge3_iv"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_badge3_iv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge3_iv" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_badge4_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginStart="24dp"
+            android:background="#F1EAFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge1_tv"
+            app:shapeAppearance="@style/Circle"/>
+
+        <TextView
+            android:id="@+id/fragment_badge_badge4_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="스토리 이름"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_badge_badge4_iv"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_badge4_iv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge4_iv" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_badge5_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="36dp"
+            android:background="#F1EAFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge3_tv"
+            app:shapeAppearance="@style/Circle" />
+
+        <TextView
+            android:id="@+id/fragment_badge_badge5_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="스토리 이름"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_badge_badge5_iv"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_badge5_iv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge5_iv" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_badge6_iv"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginEnd="24dp"
+            android:background="#F1EAFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge2_tv"
+            app:shapeAppearance="@style/Circle" />
+
+        <TextView
+            android:id="@+id/fragment_badge_badge6_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="스토리 이름"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_badge_badge6_iv"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_badge6_iv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_badge6_iv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
