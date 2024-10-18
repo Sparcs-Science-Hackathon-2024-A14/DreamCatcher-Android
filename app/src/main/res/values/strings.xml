@@ -11,4 +11,7 @@
     <string name="badge_title">Dream Cathcer</string>
     <string name="story_name_default">스토리 이름</string>
     <string name="start_title_logo">Dream\nCatcher</string>
+    <string name="start_btn">시작하기</string>
+    <string name="next_btn">다음으로</string>
+    <string name="show_hint">힌트보기</string>
 </resources>

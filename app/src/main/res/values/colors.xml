@@ -5,10 +5,11 @@
     <color name="Purple4">#412AA3</color>
     <color name="Lavender">#9989DC</color>
     <color name="Bright_Yellow">#F2F247</color>
-    <color name="Vivid_Purple">#9336EA</color>
+    <color name="Purple">#9336EA</color>
     <color name="Navy_Blue">#093194</color>
     <color name="Sky_Blue">#9BB3EE</color>
     <color name="Soft_Lilac">#BCA1DD</color>
     <color name="Purple3">#9989DC</color>
     <color name="Whit_Purple">#F1EAFF</color>
+    <color name="Gray">#D9D9D9</color>
 </resources>
