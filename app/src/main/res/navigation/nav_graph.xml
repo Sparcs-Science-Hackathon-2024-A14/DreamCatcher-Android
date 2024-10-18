@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/storyEndingFragment">
+    app:startDestination="@id/startFragment">
 
     <!-- 지도 -->
     <fragment
@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_badgeFragment_to_badgeDetailFragment"
             app:destination="@id/badgeDetailFragment" />
+        <action
+            android:id="@+id/action_badgeFragment_to_storyFragment"
+            app:destination="@id/storyFragment" />
     </fragment>
 
     <!-- 뱃지 상세보기 -->
