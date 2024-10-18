@@ -114,7 +114,7 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
             naverMap.cameraPosition.target.latitude,
             naverMap.cameraPosition.target.longitude,
         )
-        maker.icon = OverlayImage.fromResource(R.drawable.ic_launcher_foreground) // 마커 아이콘 설정
+        maker.icon = OverlayImage.fromResource(R.drawable.ic_maker_logo) // 마커 아이콘 설정
         maker.map = naverMap // 지도에 마커 추가
     }
 }
