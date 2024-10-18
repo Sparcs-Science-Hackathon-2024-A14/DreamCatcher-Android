@@ -15,13 +15,21 @@
         android:id="@+id/startFragment"
         android:name="com.example.dreamcatcher_android.ui.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" />
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.dreamcatcher_android.ui.SignInFragment"
         android:label="SignInFragment"
-        tools:layout="@layout/fragment_sign_in"/>
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/badgeFragment"
