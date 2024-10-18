@@ -3,6 +3,9 @@
     <style name="Base.Theme.DreamCatcherAndroid" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:buttonStyle">@style/Widget.AppTheme.Button</item>
     </style>
 
     <style name="Theme.DreamCatcherAndroid" parent="Base.Theme.DreamCatcherAndroid" />
@@ -10,6 +13,12 @@
     <!--  ImageView Style (원형) -->
     <style name="Circle">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- 버튼 ripple 효과 -->
+    <style name="Widget.AppTheme.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 
 </resources>
