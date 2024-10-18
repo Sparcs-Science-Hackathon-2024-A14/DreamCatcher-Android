@@ -1,6 +1,22 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+}
+
+val properties = Properties()
+val localPropertiesFile = File(rootProject.rootDir, "local.properties")
+if (localPropertiesFile.exists()) {
+    properties.load(FileInputStream(localPropertiesFile))
+}
+
+val naverClientId: String? = if (localPropertiesFile.exists()) {
+    properties.load(FileInputStream(localPropertiesFile))
+    properties.getProperty("NAVER_MAP_CLIENT_ID")
+} else {
+    null // 파일이 없을 경우 처리
 }
 
 android {
@@ -15,6 +31,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    defaultConfig {
+        manifestPlaceholders["NAVER_MAP_CLIENT_ID"] = naverClientId ?: ""
     }
 
     buildTypes {
@@ -33,6 +53,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +69,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Naver Map
+    implementation("com.naver.maps:map-sdk:3.19.1")
+    implementation("com.google.android.gms:play-services-location:20.0.0")
 }
