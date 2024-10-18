@@ -4,6 +4,7 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 val properties = Properties()
@@ -71,6 +72,39 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Naver Map
-    implementation("com.naver.maps:map-sdk:3.19.1")
-    implementation("com.google.android.gms:play-services-location:20.0.0")
+    implementation(libs.map.sdk)
+    implementation(libs.play.services.location)
+
+    // Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.dagger.compiler)
+
+    // ViewModel, LiveData
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // okHttp
+    implementation(libs.okhttp)
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+    implementation (libs.logging.interceptor)
+    implementation (libs.okhttp.urlconnection)
+
+    // retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // gson
+    implementation(libs.gson)
+
+    // glide
+    implementation(libs.glide)
+    annotationProcessor (libs.glide.compiler)
+
+    // navigation
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines)
+
 }
