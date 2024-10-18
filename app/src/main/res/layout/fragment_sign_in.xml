@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signin_logo_title"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="52dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -50,7 +50,7 @@
             style="@style/body2_14_medium"
             android:layout_width="0dp"
             android:layout_height="44dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:textColor="@color/Purple4"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:text="@string/age_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_signin_name_et" />
@@ -78,7 +78,7 @@
             style="@style/body2_14_medium"
             android:layout_width="0dp"
             android:layout_height="44dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:paddingStart="16dp"
@@ -90,15 +90,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_signin_age_tv" />
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_signin_login_ib"
+            style="@style/h2_20_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_signin_btn"
+            android:background="@drawable/ic_gradation_btn"
+            android:text="@string/start_btn"
+            android:textColor="@color/White"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_signin_age_et" />
