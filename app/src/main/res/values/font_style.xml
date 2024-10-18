@@ -47,7 +47,7 @@
     <style name="body2_14_medium">
         <item name="android:fontFamily">@font/pretendard_variable</item>
         <item name="android:textColor">@color/Black</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="fontWeight">500</item>
     </style>
 
