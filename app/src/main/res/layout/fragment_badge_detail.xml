@@ -10,7 +10,118 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.badge.BadgeDetailFragment">
+        tools:context=".ui.badge.BadgeDetailFragment"
+        android:background="@drawable/background_color_signin">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/fragment_badge_detail_badge_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/Gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/Circle" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_name_tv"
+            style="@style/h2_20_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/Purple"
+            android:text="@string/badge_example_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/fragment_badge_detail_badge_iv"
+            app:layout_constraintTop_toTopOf="@+id/fragment_badge_detail_badge_iv" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_address_tv"
+            style="@style/h5_18_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/badge_example_address"
+            app:layout_constraintStart_toStartOf="@+id/fragment_badge_detail_name_tv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_name_tv" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_story_inside_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_badge_title_border"
+            android:text="@string/science_inside_story"
+            android:textColor="@color/Purple"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_badge_iv" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_story1_tv"
+            style="@style/body3_14_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            android:breakStrategy="simple"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/science_story_example1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story_inside_tv" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_story2_tv"
+            style="@style/body3_14_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:breakStrategy="simple"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/science_story_example2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story1_tv" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_story_inside_place_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_badge_title_border"
+            android:text="@string/place_inside_story"
+            android:textColor="@color/Purple"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story2_tv" />
+
+        <TextView
+            android:id="@+id/fragment_badge_detail_place_tv"
+            style="@style/body3_14_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            android:breakStrategy="simple"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/science_place_example"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story_inside_place_tv" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
