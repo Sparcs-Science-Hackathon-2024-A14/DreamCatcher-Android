@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.HomeFragment">
+        tools:context=".ui.MapFragment">
 
         <com.naver.maps.map.MapView
             android:id="@+id/fragment_home_map_view"

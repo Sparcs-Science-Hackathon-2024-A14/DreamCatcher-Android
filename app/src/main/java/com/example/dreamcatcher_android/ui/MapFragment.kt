@@ -8,23 +8,23 @@ import androidx.annotation.UiThread
 import androidx.core.content.ContextCompat
 import com.example.dreamcatcher_android.R
 import com.example.dreamcatcher_android.base.BaseFragment
-import com.example.dreamcatcher_android.databinding.FragmentHomeBinding
+import com.example.dreamcatcher_android.databinding.FragmentMapBinding
 import com.example.dreamcatcher_android.util.PermissionCheckList
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.naver.maps.geometry.LatLng
+import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMap.LAYER_GROUP_BUILDING
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.overlay.Marker
-import com.naver.maps.map.overlay.OverlayImage
-import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.overlay.Overlay
+import com.naver.maps.map.overlay.OverlayImage
 import com.naver.maps.map.util.FusedLocationSource
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), OnMapReadyCallback {
+class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnMapReadyCallback {
 
     // 실시간 위치 정보 얻기 위한 클라이언트
     private lateinit var fusedLocationClient: FusedLocationProviderClient
