@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_20dp">
+
+        <TextView
+            android:id="@+id/dialog_hint_title_tv"
+            style="@style/h3_18_semibold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            android:text="@string/dialog_hint_title"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dialog_hint_content_tv"
+            style="@style/body2_14_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_hint_title"
+            android:textAlignment="center"
+            android:maxLines="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_hint_title_tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_hint_confirm_bt"
+            style="@style/body2_14_medium"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="72dp"
+            android:background="@drawable/ic_gradation_small"
+            android:text="@string/btn_confrim"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_hint_content_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
