@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="Black">#2E2E2E</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Deep_Blue">#412AA3</color>
+    <color name="Lavender">#9989DC</color>
+    <color name="Bright_Yellow">#F2F247</color>
+    <color name="Vivid_Purple">#9336EA</color>
+    <color name="Navy_Blue">#093194</color>
+    <color name="Sky_Blue">#9BB3EE</color>
+    <color name="Soft_Lilac">#BCA1DD</color>
 </resources>
