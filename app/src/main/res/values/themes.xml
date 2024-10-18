@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.DreamCatcherAndroid" parent="Base.Theme.DreamCatcherAndroid" />
+
+    <!--  ImageView Style (원형) -->
+    <style name="Circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
