@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/signInFragment">
+    app:startDestination="@id/storyEndingFragment">
 
     <!-- 지도 -->
     <fragment
@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_mapFragment_to_badgeFragment"
             app:destination="@id/badgeFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_storyFragment"
+            app:destination="@id/storyFragment" />
     </fragment>
 
     <!-- 첫 시작 -->
@@ -44,4 +47,34 @@
         android:name="com.example.dreamcatcher_android.ui.badge.BadgeFragment"
         android:label="BadgeFragment"
         tools:layout="@layout/fragment_badge"/>
+
+    <!-- 스토리 힌트 -->
+    <fragment
+        android:id="@+id/storyHintFragment"
+        android:name="com.example.dreamcatcher_android.ui.story.StoryHintFragment"
+        android:label="StoryHintFragment"
+        tools:layout="@layout/fragment_story_hint" >
+        <action
+            android:id="@+id/action_storyHintFragment_to_storyEndingFragment"
+            app:destination="@id/storyEndingFragment" />
+    </fragment>
+
+    <!-- 스토리 -->
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.example.dreamcatcher_android.ui.story.StoryFragment"
+        android:label="StoryFragment"
+        tools:layout="@layout/fragment_story">
+        <action
+            android:id="@+id/action_storyFragment_to_storyHintFragment"
+            app:destination="@id/storyHintFragment" />
+    </fragment>
+
+    <!-- 스토리 엔딩 -->
+    <fragment
+        android:id="@+id/storyEndingFragment"
+        android:name="com.example.dreamcatcher_android.ui.story.StoryEndingFragment"
+        android:label="StoryEndingFragment"
+        tools:layout="@layout/fragment_story_ending"/>
+
 </navigation>
