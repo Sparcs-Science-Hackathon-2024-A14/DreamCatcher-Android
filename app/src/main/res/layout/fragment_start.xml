@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Sky_Blue"
+        tools:context=".ui.StartFragment">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:src="@drawable/ic_start_logo_moon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragment_start_title_tv"
+            style="@style/h5_60_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dream\nCatcher"
+            android:textColor="@color/White"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageButton
+            android:id="@+id/fragment_start_start_ib"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:layout_marginEnd="74dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_start_btn"
+            android:layout_marginTop="156dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_start_title_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
