@@ -1,4 +1,4 @@
-package com.example.dreamcatcher_android.ui
+package com.example.dreamcatcher_android.ui.badge
 
 import android.util.Log
 import com.example.dreamcatcher_android.R

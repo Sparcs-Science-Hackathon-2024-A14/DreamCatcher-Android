@@ -1,4 +1,4 @@
-package com.example.dreamcatcher_android.ui
+package com.example.dreamcatcher_android.ui.map
 
 import android.content.pm.PackageManager
 import android.os.Handler

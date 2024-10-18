@@ -1,11 +1,11 @@
-package com.example.dreamcatcher_android.ui
+package com.example.dreamcatcher_android.ui.start
 
 import android.util.Log
 import com.example.dreamcatcher_android.R
 import com.example.dreamcatcher_android.base.BaseFragment
-import com.example.dreamcatcher_android.databinding.FragmentSignInBinding
+import com.example.dreamcatcher_android.databinding.FragmentStartBinding
 
-class SignInFragment : BaseFragment<FragmentSignInBinding>(R.layout.fragment_sign_in) {
+class StartFragment : BaseFragment<FragmentStartBinding>(R.layout.fragment_start) {
 
     override fun setLayout() {
         start()
@@ -14,6 +14,5 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>(R.layout.fragment_sig
     fun start() {
         Log.d("로그","ㅇ")
     }
-
 
 }

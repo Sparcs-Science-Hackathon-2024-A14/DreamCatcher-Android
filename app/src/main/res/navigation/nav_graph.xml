@@ -8,7 +8,7 @@
     <!-- 지도 -->
     <fragment
         android:id="@+id/mapFragment"
-        android:name="com.example.dreamcatcher_android.ui.MapFragment"
+        android:name="com.example.dreamcatcher_android.ui.map.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" >
         <action
@@ -19,7 +19,7 @@
     <!-- 첫 시작 -->
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.dreamcatcher_android.ui.StartFragment"
+        android:name="com.example.dreamcatcher_android.ui.start.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -30,7 +30,7 @@
     <!-- 로그인 -->
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.dreamcatcher_android.ui.SignInFragment"
+        android:name="com.example.dreamcatcher_android.ui.siginin.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
         <action
@@ -41,7 +41,7 @@
     <!-- 뱃지 -->
     <fragment
         android:id="@+id/badgeFragment"
-        android:name="com.example.dreamcatcher_android.ui.BadgeFragment"
+        android:name="com.example.dreamcatcher_android.ui.badge.BadgeFragment"
         android:label="BadgeFragment"
         tools:layout="@layout/fragment_badge"/>
 </navigation>
