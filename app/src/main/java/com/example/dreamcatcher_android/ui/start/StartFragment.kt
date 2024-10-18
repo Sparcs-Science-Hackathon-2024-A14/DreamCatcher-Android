@@ -1,6 +1,5 @@
 package com.example.dreamcatcher_android.ui.start
 
-import android.util.Log
 import androidx.navigation.fragment.findNavController
 import com.example.dreamcatcher_android.R
 import com.example.dreamcatcher_android.base.BaseFragment
@@ -18,7 +17,7 @@ class StartFragment : BaseFragment<FragmentStartBinding>(R.layout.fragment_start
     }
 
     private fun initButtons() {
-        binding.fragmentStartStartIb.setOnClickListener {
+        binding.fragmentStartStartBt.setOnClickListener {
             val action = StartFragmentDirections.actionStartFragmentToSignInFragment()
             findNavController().navigateSafe(action.actionId)
         }

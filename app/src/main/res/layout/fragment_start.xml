@@ -17,7 +17,7 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="164dp"
+            android:layout_marginTop="110dp"
             android:src="@drawable/ic_start_logo_moon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,6 @@
             style="@style/h5_60_Book"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:text="@string/start_title_logo"
             android:textAlignment="center"
             android:textColor="@color/White"
@@ -36,15 +35,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <ImageButton
-            android:id="@+id/fragment_start_start_ib"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_start_start_bt"
+            style="@style/h2_20_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="68dp"
             android:layout_marginStart="74dp"
             android:layout_marginEnd="74dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_start_btn"
+            android:text="@string/start_btn"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:background="@drawable/ic_gradation_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_start_title_tv" />
