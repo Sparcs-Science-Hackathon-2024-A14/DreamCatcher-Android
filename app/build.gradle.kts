@@ -6,7 +6,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs.kotlin")
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.ksp)
 }
 
 val properties = Properties()
@@ -80,7 +81,9 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
-    ksp(libs.dagger.compiler)
+    ksp(libs.hilt.compiler)
+    ksp(libs.androidx.hilt.complier)
+    implementation(libs.androidx.hilt.navigation)
 
     // ViewModel, LiveData
     implementation(libs.androidx.lifecycle.livedata.ktx)
