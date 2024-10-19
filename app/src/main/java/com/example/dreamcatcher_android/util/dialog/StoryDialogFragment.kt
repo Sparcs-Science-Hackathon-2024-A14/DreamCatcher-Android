@@ -69,6 +69,7 @@ class StoryDialogFragment(
 
         Glide.with(this)
             .load(imageUrl)
+            .error(R.drawable.ic_glide_default)
             .into(binding.dialogStoryPreviewIv)
 
         return view
