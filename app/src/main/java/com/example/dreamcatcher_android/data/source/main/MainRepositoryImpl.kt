@@ -23,6 +23,12 @@ class MainRepositoryImpl @Inject constructor(
     override suspend fun getSpotList(regionId: Int): Flow<Response<SpotPositionResponse>> =
         dataSource.getSpotList(regionId)
 
+    override suspend fun getSpotTracking(
+        regionId: Int,
+        userX: Double,
+        userY: Double
+    ): Flow<Response<QuestPopupResponse>> = dataSource.getSpotTracking(regionId, userX, userY)
+
     override suspend fun clickMarker(
         regionId: Int,
         userX: Double,
