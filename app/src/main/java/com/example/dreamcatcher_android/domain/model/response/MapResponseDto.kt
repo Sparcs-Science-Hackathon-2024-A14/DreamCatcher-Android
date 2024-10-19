@@ -2,6 +2,7 @@ package com.example.dreamcatcher_android.domain.model.response
 
 data class QuestPopupResponse (
     val questId: Long? = 0,
+    val exitQuestProcessId: Long? =0,
     val questName: String? = "",
     val questImg: String? = "",
     val questDescription: String? = ""
