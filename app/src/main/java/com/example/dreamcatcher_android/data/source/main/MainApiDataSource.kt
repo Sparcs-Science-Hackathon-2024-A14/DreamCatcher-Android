@@ -59,9 +59,9 @@ class MainApiDataSource @Inject constructor(
      }
 
 
-     fun clickMarker(regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>> = flow {
+     fun clickMarker(regionId: Int, x: Double, y: Double) : Flow<Response<QuestPopupResponse>> = flow {
           try {
-               val result = mainApi.clickMarker(regionId, userX, userY)
+               val result = mainApi.clickMarker(regionId, x, y)
                emit(result)
           } catch (e: HttpException) {
                val errorResponse = e.response()

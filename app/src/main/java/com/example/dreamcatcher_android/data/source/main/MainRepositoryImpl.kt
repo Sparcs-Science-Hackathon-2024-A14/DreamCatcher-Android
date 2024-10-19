@@ -31,9 +31,9 @@ class MainRepositoryImpl @Inject constructor(
 
     override suspend fun clickMarker(
         regionId: Int,
-        userX: Double,
-        userY: Double
-    ): Flow<Response<QuestPopupResponse>> = dataSource.clickMarker(regionId, userX, userY)
+        x: Double,
+        y: Double
+    ): Flow<Response<QuestPopupResponse>> = dataSource.clickMarker(regionId, x, y)
 
     override suspend fun getQuestProcess(
         quest_id: Int,

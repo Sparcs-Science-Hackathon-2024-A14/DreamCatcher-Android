@@ -46,11 +46,11 @@ interface MainApi {
     ): Response<QuestResponse>
 
     // 마커 클릭
-    @GET("/api/click/nearest-spot/{regionId}/{userX}/{userY}")
+    @GET("/api/click/nearest-spot/{regionId}/{x}/{y}")
     suspend fun clickMarker(
         @Path("regionId") regionId: Int,
-        @Path("userX") userX: Double,
-        @Path("userY") userY: Double
+        @Path("x") x: Double,
+        @Path("y") y: Double
     ): Response<QuestPopupResponse>
 
 
