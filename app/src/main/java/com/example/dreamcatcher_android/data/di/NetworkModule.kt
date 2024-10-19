@@ -57,7 +57,7 @@ object NetworkModule {
         return Retrofit.Builder()
             .addConverterFactory(gsonConverterFactory)
             .client(okHttpClient)
-            .baseUrl("")
+            .baseUrl("https://dream-catcher-hiha.shop/swagger-ui/index.html")
             .build()
     }
 
