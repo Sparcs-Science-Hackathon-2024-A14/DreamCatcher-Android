@@ -31,7 +31,7 @@ interface MainApi {
     ): Response<SpotPositionResponse>
 
     // 사용자 주변 스팟 추적 (실시간 좌표 전송)
-    @GET("/api/badge/{id}")
+    @GET("/api/map/nearby/{regionId}/{userX}/{userY}")
     suspend fun getSpotTracking(
         @Path("regionId") regionId: Int,
         @Path("userX") userX: Double,
