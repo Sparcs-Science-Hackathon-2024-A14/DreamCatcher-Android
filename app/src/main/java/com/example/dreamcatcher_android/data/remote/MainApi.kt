@@ -45,4 +45,13 @@ interface MainApi {
         @Path("next_process_id") next_process_id: Int
     ): Response<QuestResponse>
 
+    // 마커 클릭
+    @GET("/api/click/nearest-spot/{regionId}/{userX}/{userY}")
+    suspend fun clickMarker(
+        @Path("regionId") regionId: Int,
+        @Path("userX") userX: Double,
+        @Path("userY") userY: Double
+    ): Response<QuestPopupResponse>
+
+
 }

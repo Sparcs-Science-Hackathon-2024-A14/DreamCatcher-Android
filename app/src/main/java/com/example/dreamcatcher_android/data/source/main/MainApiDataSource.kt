@@ -58,6 +58,18 @@ class MainApiDataSource @Inject constructor(
           }
      }
 
+
+     fun clickMarker(regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>> = flow {
+          try {
+               val result = mainApi.clickMarker(regionId, userX, userY)
+               emit(result)
+          } catch (e: HttpException) {
+               val errorResponse = e.response()
+               Log.e("getSpotTracking Failure", "HTTP Error: ${errorResponse?.errorBody()?.string()}")
+          }
+     }
+
+
      fun getQuestProcess(quest_id: Int, next_process_id: Int) : Flow<Response<QuestResponse>> = flow {
           try {
                val result = mainApi.getQuestProcess(quest_id, next_process_id)

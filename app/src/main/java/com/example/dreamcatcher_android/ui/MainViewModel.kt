@@ -34,6 +34,9 @@ class MainViewModel @Inject constructor(
     private val _questPopupResponse = MutableStateFlow(Response.success(QuestPopupResponse()))
     val questPopupResponse: StateFlow<Response<QuestPopupResponse>> = _questPopupResponse
 
+    private val _clickQuestPopupResponse = MutableStateFlow(Response.success(QuestPopupResponse()))
+    val clickQuestPopupResponse: StateFlow<Response<QuestPopupResponse>> = _clickQuestPopupResponse
+
     private val _questResponse = MutableStateFlow(Response.success(QuestResponse()))
     val questResponse: StateFlow<Response<QuestResponse>> = _questResponse
 
@@ -81,9 +84,25 @@ class MainViewModel @Inject constructor(
             try {
                 mainApiRepository.getSpotTracking(regionId, userX, userY).collect {
                     _questPopupResponse.value = it
+                    Log.d("ㄹㄹㄹㄹㄹ", "${_questPopupResponse.value.body()}")
                 }
             } catch (e:Exception) {
                 Log.e("ViewModel getSpotList Error", e.message.toString())
+            }
+        }
+    }
+
+    // 마커 클릭
+    // 사용자 주변 스팟 추적
+    fun clickMarker(regionId: Int, userX: Double, userY: Double) {
+        viewModelScope.launch {
+            try {
+                mainApiRepository.clickMarker(regionId, userX, userY).collect {
+                    _questPopupResponse.value = it
+                    Log.d("ㄹㄹㄹㄹㄹ", "${_questPopupResponse.value.body()}")
+                }
+            } catch (e:Exception) {
+                Log.e("ViewModel clickMarker Error", e.message.toString())
             }
         }
     }
