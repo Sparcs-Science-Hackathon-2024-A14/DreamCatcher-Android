@@ -8,6 +8,10 @@ data class QuestPopupResponse (
 )
 
 data class SpotPositionResponse(
+   val spotPositionDtoList: List<SpotPosition>? = null
+)
+
+data class SpotPosition(
     val id: Long? = 0,
     val posX: Double? = 0.0,
     val posY: Double?= 0.0
