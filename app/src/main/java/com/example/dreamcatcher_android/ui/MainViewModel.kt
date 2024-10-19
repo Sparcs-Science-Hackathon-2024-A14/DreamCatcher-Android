@@ -10,7 +10,6 @@ import com.example.dreamcatcher_android.domain.model.response.QuestResponse
 import com.example.dreamcatcher_android.domain.model.response.SpotPositionResponse
 import com.example.dreamcatcher_android.domain.repository.MainApiRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -99,7 +98,6 @@ class MainViewModel @Inject constructor(
             try {
                 mainApiRepository.clickMarker(regionId, userX, userY).collect {
                     _questPopupResponse.value = it
-                    Log.d("ㄹㄹㄹㄹㄹ", "${_questPopupResponse.value.body()}")
                 }
             } catch (e:Exception) {
                 Log.e("ViewModel clickMarker Error", e.message.toString())
