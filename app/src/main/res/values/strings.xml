@@ -31,4 +31,5 @@
     <string name="option1_example">버너에 불을 붙여 가열한다</string>
     <string name="option2_example">버너를 터뜨린다</string>
     <string name="stroy_question_example">열기구를 띄우려고한다.\n당신의 선택은?</string>
+    <string name="story_start_btn">스토리 진행 시작</string>
 </resources>
