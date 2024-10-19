@@ -24,20 +24,23 @@ class MainRepositoryImpl @Inject constructor(
         dataSource.getSpotList(regionId)
 
     override suspend fun getSpotTracking(
+        id: Int,
         regionId: Int,
         userX: Double,
         userY: Double
-    ): Flow<Response<QuestPopupResponse>> = dataSource.getSpotTracking(regionId, userX, userY)
+    ): Flow<Response<QuestPopupResponse>> = dataSource.getSpotTracking(id, regionId, userX, userY)
 
     override suspend fun clickMarker(
+        id:Int,
         regionId: Int,
         x: Double,
         y: Double
-    ): Flow<Response<QuestPopupResponse>> = dataSource.clickMarker(regionId, x, y)
+    ): Flow<Response<QuestPopupResponse>> = dataSource.clickMarker(id, regionId, x, y)
 
     override suspend fun getQuestProcess(
+        id: Int,
         quest_id: Int,
         next_process_id: Int
-    ): Flow<Response<QuestResponse>> = dataSource.getQuestProcess(quest_id, next_process_id)
+    ): Flow<Response<QuestResponse>> = dataSource.getQuestProcess(id, quest_id, next_process_id)
 
 }

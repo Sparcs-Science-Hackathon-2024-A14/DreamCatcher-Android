@@ -78,10 +78,10 @@ class MainViewModel @Inject constructor(
     }
 
     // 사용자 주변 스팟 추적
-    fun getSpotTracking(regionId: Int, userX: Double, userY: Double) {
+    fun getSpotTracking(id:Int, regionId: Int, userX: Double, userY: Double) {
         viewModelScope.launch {
             try {
-                mainApiRepository.getSpotTracking(regionId, userX, userY).collect {
+                mainApiRepository.getSpotTracking(id, regionId, userX, userY).collect {
                     _questPopupResponse.value = it
                     Log.d("ㄹㄹㄹㄹㄹ", "${_questPopupResponse.value.body()}")
                 }
@@ -93,10 +93,10 @@ class MainViewModel @Inject constructor(
 
     // 마커 클릭
     // 사용자 주변 스팟 추적
-    fun clickMarker(regionId: Int, userX: Double, userY: Double) {
+    fun clickMarker(id:Int, regionId: Int, userX: Double, userY: Double) {
         viewModelScope.launch {
             try {
-                mainApiRepository.clickMarker(regionId, userX, userY).collect {
+                mainApiRepository.clickMarker(id, regionId, userX, userY).collect {
                     _questPopupResponse.value = it
                 }
             } catch (e:Exception) {
@@ -106,10 +106,10 @@ class MainViewModel @Inject constructor(
     }
 
     // 퀘스트 호출
-    fun getQuestProcess(quest_id: Int, next_process_id: Int) {
+    fun getQuestProcess(id:Int, quest_id: Int, next_process_id: Int) {
         viewModelScope.launch {
             try {
-                mainApiRepository.getQuestProcess(quest_id, next_process_id).collect {
+                mainApiRepository.getQuestProcess(id, quest_id, next_process_id).collect {
                     _questResponse.value = it
                 }
             } catch (e:Exception) {

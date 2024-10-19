@@ -12,7 +12,7 @@ interface MainApiRepository {
     suspend fun getLogin(name: String, age:Int) : Flow<Response<LoginResponse>>
     suspend fun getBadgeList(id: Int) : Flow<Response<BadgeListResponse>>
     suspend fun getSpotList(regionId: Int) : Flow<Response<SpotPositionResponse>>
-    suspend fun getSpotTracking(regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>>
-    suspend fun clickMarker(regionId: Int, x: Double, y: Double) : Flow<Response<QuestPopupResponse>>
-    suspend fun getQuestProcess(quest_id: Int, next_process_id: Int) : Flow<Response<QuestResponse>>
+    suspend fun getSpotTracking(id:Int, regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>>
+    suspend fun clickMarker(id:Int, regionId: Int, x: Double, y: Double) : Flow<Response<QuestPopupResponse>>
+    suspend fun getQuestProcess(id:Int, quest_id: Int, next_process_id: Int) : Flow<Response<QuestResponse>>
 }

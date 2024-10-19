@@ -31,23 +31,26 @@ interface MainApi {
     ): Response<SpotPositionResponse>
 
     // 사용자 주변 스팟 추적 (실시간 좌표 전송)
-    @GET("/api/map/nearby/{regionId}/{userX}/{userY}")
+    @GET("/api/map/nearby/{id}/{regionId}/{userX}/{userY}")
     suspend fun getSpotTracking(
+        @Path("id") id: Int,
         @Path("regionId") regionId: Int,
         @Path("userX") userX: Double,
         @Path("userY") userY: Double,
     ): Response<QuestPopupResponse>
 
     // 퀘스트 목록
-    @GET("/api/quest/{quest_id}/{next_process_id}")
+    @GET("/api/quest/{id}/{quest_id}/{next_process_id}")
     suspend fun getQuestProcess(
+        @Path("id") id: Int,
         @Path("quest_id") quest_id: Int,
         @Path("next_process_id") next_process_id: Int
     ): Response<QuestResponse>
 
     // 마커 클릭
-    @GET("/api/click/nearest-spot/{regionId}/{x}/{y}")
+    @GET("/api/click/nearest-spot/{id}/{regionId}/{x}/{y}")
     suspend fun clickMarker(
+        @Path("id") id: Int,
         @Path("regionId") regionId: Int,
         @Path("x") x: Double,
         @Path("y") y: Double

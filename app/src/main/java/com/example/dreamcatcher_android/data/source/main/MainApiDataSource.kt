@@ -48,9 +48,9 @@ class MainApiDataSource @Inject constructor(
           }
      }
 
-     fun getSpotTracking(regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>> = flow {
+     fun getSpotTracking(id:Int,regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>> = flow {
           try {
-               val result = mainApi.getSpotTracking(regionId, userX, userY)
+               val result = mainApi.getSpotTracking(id, regionId, userX, userY)
                emit(result)
           } catch (e: HttpException) {
                val errorResponse = e.response()
@@ -59,9 +59,9 @@ class MainApiDataSource @Inject constructor(
      }
 
 
-     fun clickMarker(regionId: Int, x: Double, y: Double) : Flow<Response<QuestPopupResponse>> = flow {
+     fun clickMarker(id:Int, regionId: Int, x: Double, y: Double) : Flow<Response<QuestPopupResponse>> = flow {
           try {
-               val result = mainApi.clickMarker(regionId, x, y)
+               val result = mainApi.clickMarker(id, regionId, x, y)
                emit(result)
           } catch (e: HttpException) {
                val errorResponse = e.response()
@@ -70,9 +70,9 @@ class MainApiDataSource @Inject constructor(
      }
 
 
-     fun getQuestProcess(quest_id: Int, next_process_id: Int) : Flow<Response<QuestResponse>> = flow {
+     fun getQuestProcess(id:Int, quest_id: Int, next_process_id: Int) : Flow<Response<QuestResponse>> = flow {
           try {
-               val result = mainApi.getQuestProcess(quest_id, next_process_id)
+               val result = mainApi.getQuestProcess(id, quest_id, next_process_id)
                emit(result)
           } catch (e: HttpException) {
                val errorResponse = e.response()
