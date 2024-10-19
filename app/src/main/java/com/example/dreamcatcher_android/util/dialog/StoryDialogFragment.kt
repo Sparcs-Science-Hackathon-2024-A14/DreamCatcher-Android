@@ -16,7 +16,7 @@ class StoryDialogFragment(private val imageUrl: String, title: String, content: 
 
     override fun onStart() {
         super.onStart()
-        val width = (resources.displayMetrics.widthPixels * 0.7).toInt()
+        val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
         dialog?.window?.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
