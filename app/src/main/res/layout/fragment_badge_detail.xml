@@ -77,51 +77,50 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story_inside_tv" />
 
-        <TextView
-            android:id="@+id/fragment_badge_detail_story2_tv"
-            style="@style/body3_14_regular"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="24dp"
-            android:breakStrategy="simple"
-            android:lineSpacingExtra="3dp"
-            android:text="@string/science_story_example2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story1_tv" />
+<!--        <TextView-->
+<!--            android:id="@+id/fragment_badge_detail_story2_tv"-->
+<!--            style="@style/body3_14_regular"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:breakStrategy="simple"-->
+<!--            android:lineSpacingExtra="3dp"-->
+<!--            android:text="@string/science_story_example2"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story1_tv" />-->
 
-        <TextView
-            android:id="@+id/fragment_badge_detail_story_inside_place_tv"
-            style="@style/body2_14_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/ic_badge_title_border"
-            android:text="@string/place_inside_story"
-            android:textColor="@color/Purple"
-            android:textAlignment="center"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story2_tv" />
+<!--        <TextView-->
+<!--            android:id="@+id/fragment_badge_detail_story_inside_place_tv"-->
+<!--            style="@style/body2_14_medium"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="36dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:background="@drawable/ic_badge_title_border"-->
+<!--            android:text="@string/place_inside_story"-->
+<!--            android:textColor="@color/Purple"-->
+<!--            android:textAlignment="center"-->
+<!--            android:gravity="center"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story2_tv" />-->
 
-        <TextView
-            android:id="@+id/fragment_badge_detail_place_tv"
-            style="@style/body3_14_regular"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="12dp"
-            android:breakStrategy="simple"
-            android:lineSpacingExtra="3dp"
-            android:text="@string/science_place_example"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story_inside_place_tv" />
-
+<!--        <TextView-->
+<!--            android:id="@+id/fragment_badge_detail_place_tv"-->
+<!--            style="@style/body3_14_regular"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:breakStrategy="simple"-->
+<!--            android:lineSpacingExtra="3dp"-->
+<!--            android:text="@string/science_place_example"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/fragment_badge_detail_story_inside_place_tv" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

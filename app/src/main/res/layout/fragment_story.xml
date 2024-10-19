@@ -19,11 +19,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginTop="60dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/shape_rounded_20dp"
-            app:layout_constraintBottom_toTopOf="@+id/fragment_story_next_bt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/fragment_story_iv"
@@ -33,6 +34,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/shape_rounded_12dp"
+                android:backgroundTint="@color/White"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -44,12 +46,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="24dp"
+                android:layout_marginEnd="20dp"
                 android:breakStrategy="simple"
-                android:lineSpacingExtra="3dp"
-                android:textAlignment="center"
                 android:text="@string/story_start_text_example"
+                android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,20 +59,36 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/fragment_story_next_bt"
+            android:id="@+id/fragment_story_next_bt1"
             style="@style/h4_18_medium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="188dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/ic_gradation_btn"
             android:text="@string/next_btn"
             android:textAlignment="center"
             android:textColor="@color/White"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_story_cl" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_story_next_bt2"
+            style="@style/h4_18_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_gradation_btn"
+            android:text="@string/option2_example"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_story_next_bt1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
