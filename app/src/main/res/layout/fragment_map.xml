@@ -17,6 +17,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <com.naver.maps.map.widget.LocationButtonView
+            android:id="@+id/location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="bottom"/>
+
         <ImageButton
             android:id="@+id/fragment_home_story_btn"
             android:layout_width="match_parent"
@@ -24,7 +32,7 @@
             android:background="@android:color/transparent"
             android:layout_marginBottom="28dp"
             android:src="@drawable/ic_home_go_story_btn"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="bottom|end"/>
 
     </FrameLayout>
 </layout>
