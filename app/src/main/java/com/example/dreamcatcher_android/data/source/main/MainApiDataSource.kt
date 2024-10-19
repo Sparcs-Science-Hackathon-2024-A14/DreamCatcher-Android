@@ -6,6 +6,7 @@ import com.example.dreamcatcher_android.domain.model.response.BadgeListResponse
 import com.example.dreamcatcher_android.domain.model.response.LoginResponse
 import com.example.dreamcatcher_android.domain.model.response.QuestPopupResponse
 import com.example.dreamcatcher_android.domain.model.response.QuestResponse
+import com.example.dreamcatcher_android.domain.model.response.SpotPositionResponse
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
@@ -37,13 +38,23 @@ class MainApiDataSource @Inject constructor(
           }
      }
 
-     fun getSpotList(regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>> = flow {
+     fun getSpotList(regionId: Int) : Flow<Response<SpotPositionResponse>> = flow {
           try {
-               val result = mainApi.getSpotList(regionId, userX, userY)
+               val result = mainApi.getSpotList(regionId)
                emit(result)
           } catch (e: HttpException) {
                val errorResponse = e.response()
                Log.e("getSpotList Failure", "HTTP Error: ${errorResponse?.errorBody()?.string()}")
+          }
+     }
+
+     fun getSpotTracking(regionId: Int, userX: Double, userY: Double) : Flow<Response<QuestPopupResponse>> = flow {
+          try {
+               val result = mainApi.getSpotTracking(regionId, userX, userY)
+               emit(result)
+          } catch (e: HttpException) {
+               val errorResponse = e.response()
+               Log.e("getSpotTracking Failure", "HTTP Error: ${errorResponse?.errorBody()?.string()}")
           }
      }
 

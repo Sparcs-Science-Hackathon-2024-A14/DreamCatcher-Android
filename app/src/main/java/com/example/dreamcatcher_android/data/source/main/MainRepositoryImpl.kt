@@ -4,6 +4,7 @@ import com.example.dreamcatcher_android.domain.model.response.BadgeListResponse
 import com.example.dreamcatcher_android.domain.model.response.LoginResponse
 import com.example.dreamcatcher_android.domain.model.response.QuestPopupResponse
 import com.example.dreamcatcher_android.domain.model.response.QuestResponse
+import com.example.dreamcatcher_android.domain.model.response.SpotPositionResponse
 import com.example.dreamcatcher_android.domain.repository.MainApiRepository
 import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
@@ -19,11 +20,14 @@ class MainRepositoryImpl @Inject constructor(
     override suspend fun getBadgeList(id: Int): Flow<Response<BadgeListResponse>> =
         dataSource.getBadgeList(id)
 
-    override suspend fun getSpotList(
+    override suspend fun getSpotList(regionId: Int): Flow<Response<SpotPositionResponse>> =
+        dataSource.getSpotList(regionId)
+
+    override suspend fun getSpotTracking(
         regionId: Int,
         userX: Double,
         userY: Double
-    ): Flow<Response<QuestPopupResponse>> = dataSource.getSpotList(regionId, userX, userY)
+    ): Flow<Response<QuestPopupResponse>> = dataSource.getSpotTracking(regionId, userX, userY)
 
     override suspend fun getQuestProcess(
         quest_id: Int,

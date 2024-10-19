@@ -7,8 +7,10 @@ import com.example.dreamcatcher_android.domain.model.response.BadgeListResponse
 import com.example.dreamcatcher_android.domain.model.response.LoginResponse
 import com.example.dreamcatcher_android.domain.model.response.QuestPopupResponse
 import com.example.dreamcatcher_android.domain.model.response.QuestResponse
+import com.example.dreamcatcher_android.domain.model.response.SpotPositionResponse
 import com.example.dreamcatcher_android.domain.repository.MainApiRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -25,6 +27,9 @@ class MainViewModel @Inject constructor(
 
     private val _badgeListResponse = MutableStateFlow(Response.success(BadgeListResponse()))
     val badgeListResponse: StateFlow<Response<BadgeListResponse>> = _badgeListResponse
+
+    private val _spotPositionResponse = MutableStateFlow(Response.success(SpotPositionResponse()))
+    val spotPositionResponse: StateFlow<Response<SpotPositionResponse>> = _spotPositionResponse
 
     private val _questPopupResponse = MutableStateFlow(Response.success(QuestPopupResponse()))
     val questPopupResponse: StateFlow<Response<QuestPopupResponse>> = _questPopupResponse
@@ -58,11 +63,23 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    // 장소 팝업
-    fun getSpotList(regionId: Int, userX: Double, userY: Double) {
+    fun getSpotList(regionId: Int) {
         viewModelScope.launch {
             try {
-                mainApiRepository.getSpotList(regionId, userX, userY).collect {
+                mainApiRepository.getSpotList(regionId).collect {
+                    _spotPositionResponse.value = it
+                }
+            } catch (e:Exception) {
+                Log.e("ViewModel getSpotList Error", e.message.toString())
+            }
+        }
+    }
+
+    // 사용자 주변 스팟 추적
+    fun getSpotTracking(regionId: Int, userX: Double, userY: Double) {
+        viewModelScope.launch {
+            try {
+                mainApiRepository.getSpotTracking(regionId, userX, userY).collect {
                     _questPopupResponse.value = it
                 }
             } catch (e:Exception) {
