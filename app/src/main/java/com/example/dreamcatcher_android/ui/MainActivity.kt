@@ -18,7 +18,9 @@ import com.example.dreamcatcher_android.R
 import com.example.dreamcatcher_android.base.BaseActivity
 import com.example.dreamcatcher_android.databinding.ActivityMainBinding
 import com.example.dreamcatcher_android.util.PermissionCheckList
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     private lateinit var permissionList : List<String>

@@ -33,9 +33,9 @@ object NetworkModule {
     @Provides
     fun provideGsonConverterFactory(): GsonConverterFactory = GsonConverterFactory.create()
 
-    @Singleton
     @Provides
-    @Named("defaultOkhttpClient")
+    @Singleton
+    @Named("defaultMainApiClient")
     fun provideOKHttpClient(
         httpLoggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
@@ -57,7 +57,7 @@ object NetworkModule {
         return Retrofit.Builder()
             .addConverterFactory(gsonConverterFactory)
             .client(okHttpClient)
-            .baseUrl("https://dream-catcher-hiha.shop/swagger-ui/index.html")
+            .baseUrl("https://dream-catcher-hiha.shop/")
             .build()
     }
 

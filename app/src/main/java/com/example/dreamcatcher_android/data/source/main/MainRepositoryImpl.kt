@@ -16,7 +16,6 @@ class MainRepositoryImpl @Inject constructor(
     override suspend fun getLogin(name: String, age: Int): Flow<Response<LoginResponse>> =
         dataSource.getLogin(name, age)
 
-
     override suspend fun getBadgeList(id: Int): Flow<Response<BadgeListResponse>> =
         dataSource.getBadgeList(id)
 
