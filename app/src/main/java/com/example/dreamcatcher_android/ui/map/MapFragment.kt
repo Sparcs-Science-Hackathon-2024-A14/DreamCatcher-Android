@@ -67,7 +67,6 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
 
     override fun onPause() {
         super.onPause()
-        handler.removeCallbacksAndMessages(null) // 핸들러에 예약된 모든 작업을 정지
         if (::storyDialogFragment.isInitialized && storyDialogFragment.isAdded) {
             storyDialogFragment.dismissAllowingStateLoss()
         }
@@ -288,19 +287,17 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
                             return@collect
                         }
 
-                        // 다이얼로그 생성 및 표시 전 핸들러 정지
-                        if (!isDialogVisible) {
-                            handler.removeCallbacksAndMessages(null)
-                            isDialogVisible = true // 다이얼로그 표시 상태 업데이트
-                        }
-
                         // 다이얼로그 생성
-                        storyDialogFragment = StoryDialogFragment(
-                            it.questImg.toString(),
-                            it.questName.toString(),
-                            it.questDescription.toString(),
-                            this@MapFragment
-                        )
+                        if (it.questImg != null && it.questName != null && it.questDescription != null) {
+                            val questName = it.questName.takeIf { it.isNotEmpty() } ?: "열기구 날자!"
+                            val questDescription = it.questDescription?.takeIf { it.isNotEmpty() } ?: "열기구를 수리해서 드높은 하늘을 감상하자!"
+                            storyDialogFragment = StoryDialogFragment(
+                                it.questImg.toString(),
+                                questName ,
+                                questDescription,
+                                this@MapFragment
+                            )
+                        }
 
                         // 안전한 상태에서 다이얼로그 표시
                         if (!childFragmentManager.isStateSaved) {

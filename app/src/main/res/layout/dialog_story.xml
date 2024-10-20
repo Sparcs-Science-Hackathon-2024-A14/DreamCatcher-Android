@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/dialog_story_preview_iv"
-            android:layout_width="132dp"
+            android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
@@ -42,14 +42,13 @@
             style="@style/body2_14_medium"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
             android:layout_marginTop="4dp"
-            android:text="@string/story_dialog_content_example"
-            android:maxLines="2"
+            android:layout_marginEnd="12dp"
             android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/story_dialog_content_example"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/dialog_story_preview_iv"
+            app:layout_constraintStart_toStartOf="@+id/dialog_story_title_tv"
             app:layout_constraintTop_toBottomOf="@+id/dialog_story_title_tv" />
 
         <androidx.appcompat.widget.AppCompatButton

@@ -69,7 +69,7 @@ class StoryFragment : BaseFragment<FragmentStoryBinding>(R.layout.fragment_story
                 getUpdateUI()
             }
             if(endingId == 8) {
-                mediaPlayer?.stop()
+                mediaPlayer?.release()
                 val action = StoryFragmentDirections.actionStoryFragmentToMapFragment()
                 findNavController().navigateSafe(action.actionId)
             }
