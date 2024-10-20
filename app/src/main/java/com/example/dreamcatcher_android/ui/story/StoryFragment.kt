@@ -24,12 +24,22 @@ class StoryFragment : BaseFragment<FragmentStoryBinding>(R.layout.fragment_story
     private var nextQuestId = 0 // 다음 퀘스트 아이디
     private var currentBranch = false // 다음 분기가 Branch 인지 T/F
 
+    var endingId = 0
+
     private var option1 = 0 // 1번 선택지 ID
     private var option2 = 0 // 2번 선택지 ID
     private var mediaPlayer: MediaPlayer? = null // MediaPlayer 객체 추가
 
     override fun setLayout() {
         initSettings()
+    }
+
+    private fun resetState() {
+        // 모든 변수 초기화
+        nextQuestId = 0
+        currentBranch = false
+        option1 = 0
+        option2 = 0
     }
 
     private fun getQuestId() {
@@ -57,6 +67,11 @@ class StoryFragment : BaseFragment<FragmentStoryBinding>(R.layout.fragment_story
             if (option1 != 0) {
                 getQuestProcess(option1)
                 getUpdateUI()
+            }
+            if(endingId == 8) {
+                mediaPlayer?.stop()
+                val action = StoryFragmentDirections.actionStoryFragmentToMapFragment()
+                findNavController().navigateSafe(action.actionId)
             }
         }
 
@@ -99,9 +114,7 @@ class StoryFragment : BaseFragment<FragmentStoryBinding>(R.layout.fragment_story
                     binding.fragmentStoryContentTv.text = body?.processDescription // 설명
                     setImageView(body?.processImg.toString()) // 이미지
 
-                    if(body?.nextFirstId?.toInt() == null) {
-
-                    }
+                    endingId = body?.id?.toInt() ?: 8
 
                     option1 = body?.nextFirstId?.toInt() ?: 0
                     option2 = body?.nextSecondId?.toInt() ?: 0
@@ -143,6 +156,7 @@ class StoryFragment : BaseFragment<FragmentStoryBinding>(R.layout.fragment_story
 
     override fun onDestroyView() {
         super.onDestroyView()
+        resetState()
         releaseMediaPlayer()
     }
 

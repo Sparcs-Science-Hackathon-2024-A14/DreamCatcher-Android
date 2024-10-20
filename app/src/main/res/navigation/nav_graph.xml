@@ -82,6 +82,9 @@
         <action
             android:id="@+id/action_storyFragment_to_storyHintFragment"
             app:destination="@id/storyHintFragment" />
+        <action
+            android:id="@+id/action_storyFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
 
     <!-- 스토리 엔딩 -->

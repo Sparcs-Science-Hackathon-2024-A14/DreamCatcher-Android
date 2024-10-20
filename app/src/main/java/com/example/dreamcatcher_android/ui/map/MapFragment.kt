@@ -154,8 +154,8 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
         locationButton.map = naverMap
 
         getMarkers() // 마커 정보 서버에서 불러와 표시 및 클릭 리스너 설정
-        requestLocationUpdates() // 사용자의 현재 위치 업데이트
-        startTracking() // 사용자 위치 추적 및  서버에 현재 위치 전송
+        //requestLocationUpdates() // 사용자의 현재 위치 업데이트
+        //startTracking() // 사용자 위치 추적 및  서버에 현재 위치 전송
     }
 
     // 사용자의 위치를 추적하는 함수
@@ -172,8 +172,8 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
     // 서버에 현재 위치 전송하는 함수
     private fun sendLocationToServer() {
         currentLocation?.let { location ->
-            val userX = 36.3752259 //   location.latitude
-            val userY = 127.3918897 //location.longitude
+            val userX = 36.375136 //   location.latitude
+            val userY = 127.3894007 //location.longitude
 
             // 서버에 현재 위치 전송
             lifecycleScope.launch {
@@ -249,8 +249,8 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
     // 좌표 배열의 좌표로 마커 생성 및 마커 클릭 이벤트 처리 함수
     private fun addMarkerToMap(locations: List<SpotPosition>) {
         for (spot in locations) {
-            val posX = spot.posX
-            val posY = spot.posY
+            val posX = spot.posX    // 36.375136
+            val posY = spot.posY    // 127.3894007
 
             // 좌표가 null이 아닌지, NaN이 아닌지 확인한 후에만 마커 추가
             if (posX != null && posY != null && !posX.isNaN() && !posY.isNaN()) {
@@ -263,7 +263,7 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
                 Log.d("MapFragment", "마커 추가됨: ${latLng.latitude}, ${latLng.longitude}, ID: ${spot.id}")
 
                 marker.setOnClickListener { overlay: Overlay ->
-                    mainViewModel.clickMarker(GlobalApplication.prefsManager.getUserId(),1, posY, posX)
+                    mainViewModel.clickMarker(spot.id?.toInt() ?: 1,1, 36.375136, 127.3894007)
                     observeQuestPopupResponse()
                     false
                 }
@@ -294,14 +294,20 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
                             isDialogVisible = true // 다이얼로그 표시 상태 업데이트
                         }
 
-                        // 다이얼로그 생성 및 표시
+                        // 다이얼로그 생성
                         storyDialogFragment = StoryDialogFragment(
                             it.questImg.toString(),
                             it.questName.toString(),
                             it.questDescription.toString(),
-                            this@MapFragment // 현재 Fragment를 전달
+                            this@MapFragment
                         )
-                        storyDialogFragment.show(childFragmentManager, "StoryDialogClick")
+
+                        // 안전한 상태에서 다이얼로그 표시
+                        if (!childFragmentManager.isStateSaved) {
+                            storyDialogFragment.show(childFragmentManager, "StoryDialogClick")
+                        } else {
+                            Log.w("MapFragment", "다이얼로그를 표시할 수 없습니다. 상태가 이미 저장되었습니다.")
+                        }
                     }
                 } else {
                     Log.e("MapFragment", "Failed to receive data.")
@@ -331,7 +337,7 @@ class MapFragment : BaseFragment<FragmentMapBinding>(R.layout.fragment_map), OnM
     // 다이얼로그 닫히면 호출되는 함수
     override fun onDialogDismiss() {
         isDialogVisible = false
-        startTracking() // 다이얼로그가 닫힐 때 핸들러 다시 시작
+        //startTracking() // 다이얼로그가 닫힐 때 핸들러 다시 시작
     }
 
 }
