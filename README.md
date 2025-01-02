@@ -16,7 +16,7 @@
   - [실행영상](#실행영상)
 
 ## 개요
-- 프로젝트 이름: Dream Catcher (대전 Sparks 과학 해커톤)
+- 프로젝트 이름: Dream Catcher (대전 SPARCS 과학 해커톤)
 - 프로젝트 지속기간: 2024.10.18 ~ 2024.10.20
 - 개발 엔진 및 언어: Android Studio, Kotlin
 - 멤버: 김성민
