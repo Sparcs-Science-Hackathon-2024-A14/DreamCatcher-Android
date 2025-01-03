@@ -41,10 +41,11 @@
 ### **🤖** 안드로이드
 | **Category** | **TechStack** |
 | --- | --- |
+| Language | Kotlin |
 | Architecture | Repository Pattern, MVVM |
 | DI | Hilt |
-| Network | Retrofit, OkHttp |
-| Asynchronous | Coroutines, Flow |
+| Network | Retrofit |
+| Asynchronous | Coroutine, Flow |
 | Jetpack | Navigation |
 | Image | Glide |
 | Map | Naver Map SDK |
