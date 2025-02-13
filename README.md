@@ -44,7 +44,7 @@
 | Language | Kotlin |
 | Architecture | Repository Pattern, MVVM |
 | DI | Hilt |
-| Network | Retrofit |
+| Network | Retrofit, OkHttp |
 | Asynchronous | Coroutine, Flow |
 | Jetpack | Navigation |
 | Image | Glide |
